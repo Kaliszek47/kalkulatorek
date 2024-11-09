@@ -102,57 +102,81 @@ public class Main {
 //                System.out.println("podany znak jest błędny");
 //        }
 
-        System.out.println("Dwie liczby całkowite i suma ich ciągu");
+//        System.out.println("Dwie liczby całkowite i suma ich ciągu");
+//
+//        Scanner l= new Scanner(System.in);
+//
+//        System.out.println("Podaj pierwszą liczbę: ");
+//
+//        int liczba = l.nextInt();
+//
+//        System.out.println("Podaj drugą liczbę: ");
+//
+//        int liczbb = l.nextInt();
+//
+//        if(liczba>liczbb){
+//            System.out.println("Pierwsza liczba musi być mniejsza od drugiej ");
+//        }
+//        else{
+//            int suma=0;
+//            suma=liczbb-liczba;
+//            int ciag=liczba;
+//
+//            for(int i=0; i<suma; i++){
+//                ciag+=(i+liczba+1);
+//            }
+//
+//            System.out.println("(for) Suma ciągu wynosi: "+ ciag);
+//
+//            int ciagw=0;
+//
+//            int i=liczba;
+//            while( i<=liczbb){
+//                ciagw+= i;
+//                i++;
+//            }
+//
+//            System.out.println("(while) Suma ciągu wynosi: "+ ciagw);
+//
+//            int ciagdw=0;
+//
+//            int j=liczba;
+//
+//            do{
+//                ciagdw+=j;
+//                j++;
+//            }
+//            while(j<=liczbb);
+//
+//
+//
+//            System.out.println("(do while) Suma ciągu wynosi: "+ciagdw);
+//
+//        }
 
-        Scanner l= new Scanner(System.in);
+        System.out.println("program obliczajacy nalezny podatek dochodowy");
 
-        System.out.println("Podaj pierwszą liczbę: ");
+        System.out.println("Podaj swój dochód: ");
+        Scanner input= new Scanner(System.in);
+        double dochod= input.nextDouble();
 
-        int liczba = l.nextInt();
+        double podatek=0;
 
-        System.out.println("Podaj drugą liczbę: ");
 
-        int liczbb = l.nextInt();
 
-        if(liczba>liczbb){
-            System.out.println("Pierwsza liczba musi być mniejsza od drugiej ");
-        }
-        else{
-            int suma=0;
-            suma=liczbb-liczba;
-            int ciag=liczba;
-
-            for(int i=0; i<suma; i++){
-                ciag+=(i+liczba+1);
+            if (dochod < 85_528) {
+                podatek = (0.18 * dochod) - 556.02;
+                System.out.println("Należny podatek wynosi " + podatek + "zł");
+            } else if (dochod >= 85_528) {
+                double nadwyzka = dochod - 85_528;
+                podatek = 14_839.02 + 0.32 * nadwyzka;
+                System.out.println("Należny podatek wynosi " + (podatek) + "zł");
+            } else {
+                System.out.println("Proszę podać poprawne dane ");
             }
 
-            System.out.println("(for) Suma ciągu wynosi: "+ ciag);
-
-            int ciagw=0;
-
-            int i=liczba;
-            while( i<=liczbb){
-                ciagw+= i;
-                i++;
-            }
-
-            System.out.println("(while) Suma ciągu wynosi: "+ ciagw);
-
-            int ciagdw=0;
-
-            int j=liczba;
-
-            do{
-                ciagdw+=j;
-                j++;
-            }
-            while(j<=liczbb);
 
 
-
-            System.out.println("(do while) Suma ciągu wynosi: "+ciagdw);
-
-        }
 
 
 

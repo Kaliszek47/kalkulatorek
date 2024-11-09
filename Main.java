@@ -177,6 +177,23 @@ public class Main {
 //
     }
 }
+class Cars {
+    String marka;
+    String kolor;
+    String drzwi;
+
+        public String getMarka() {
+            return marka;
+        }
+        public String getKolor(){
+            return kolor;
+        }
+        public String getDrzwi(){
+            return drzwi;
+        }
+
+
+}
 
 
 //multiplier do mnożników ofc

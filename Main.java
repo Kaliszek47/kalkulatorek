@@ -57,50 +57,105 @@ public class Main {
 //            System.out.println("Proszę podać poprawne dane");
 //        }
 
-        System.out.println("kalkulator");
+//        System.out.println("kalkulator");
+//
+//        Scanner inp=new Scanner(System.in);
+//        System.out.println("podaj 1 liczbę ");
+//        double num1 = inp.nextDouble();
+//
+//        Scanner inp=new Scanner(System.in);
+//        System.out.println("podaj znak operacji (+, -, *, /) " );
+//        string znak= inp.next();
+//
+//        Scanner inp =new Scanner(System.in);
+//        System.out.println("podaj 2 liczbę ");
+//        double num2 = inp.nextDouble();
+//
+//        switch(znak){
+//            case x:
+//            znak= "+";
+//                System.out.println("suma wynosi " + (num1+num2));
+//                break;
+//
+//            case y:
+//            znak="-";
+//                System.out.println("odejmowanie wynosi " + (num1-num2));
+//                break;
+//
+//            case z:
+//            znak="/";
+//
+//            if(num2==0){
+//                System.out.println("nie dzielimy przez zero idioto");
+//            }
+//            else{
+//                System.out.println("dzielenie wynosi " + (num1/num2));
+//            }
+//                break;
+//
+//            case w:
+//            znak="*";
+//                System.out.println("mnożenie wynosi " + (num1*num2));
+//                break;
+//
+//            default:
+//                System.out.println("podany znak jest błędny");
+//        }
 
-        Scanner inp=new Scanner(System.in);
-        System.out.println("podaj 1 liczbę ");
-        double num1 = inp.nextInt;
+        System.out.println("Dwie liczby całkowite i suma ich ciągu");
 
-        Scanner inp=new Scanner(System.in);
-        System.out.println("podaj znak operacji (+, -, *, /) " );
-        string znak= inp.nextInt;
+        Scanner l= new Scanner(System.in);
 
-        Scanner inp =new Scanner(System.in);
-        System.out.println("podaj 2 liczbę ");
-        double num2 = inp.nextInt;
+        System.out.println("Podaj pierwszą liczbę: ");
 
-        switch(znak){
-            case x:
-            znak= "+";
-                System.out.println("suma wynosi " + (num1+num2));
-                break;
+        int liczba = l.nextInt();
 
-            case y:
-            znak="-";
-                System.out.println("odejmowanie wynosi " + (num1-num2));
-                break;
+        System.out.println("Podaj drugą liczbę: ");
 
-            case z:
-            znak="/";
+        int liczbb = l.nextInt();
 
-            if(num2==0){
-                System.out.println("nie dzielimy przez zero idioto");
-            }
-            else{
-                System.out.println("dzielenie wynosi " + (num1/num2));
-            }
-                break;
-
-            case w:
-            znak="*";
-                System.out.println("mnożenie wynosi " + (num1*num2));
-                break;
-
-            default:
-                System.out.println("podany znak jest błędny");
+        if(liczba>liczbb){
+            System.out.println("Pierwsza liczba musi być mniejsza od drugiej ");
         }
+        else{
+            int suma=0;
+            suma=liczbb-liczba;
+            int ciag=liczba;
+
+            for(int i=0; i<suma; i++){
+                ciag+=(i+liczba+1);
+            }
+
+            System.out.println("(for) Suma ciągu wynosi: "+ ciag);
+
+            int ciagw=0;
+
+            int i=liczba;
+            while( i<=liczbb){
+                ciagw+= i;
+                i++;
+            }
+
+            System.out.println("(while) Suma ciągu wynosi: "+ ciagw);
+
+            int ciagdw=0;
+
+            int j=liczba;
+
+            do{
+                ciagdw+=j;
+                j++;
+            }
+            while(j<=liczbb);
+
+
+
+            System.out.println("(do while) Suma ciągu wynosi: "+ciagdw);
+
+        }
+
+
+
     }
 }
 //multiplier do mnożników ofc

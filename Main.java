@@ -153,33 +153,32 @@ public class Main {
 //            System.out.println("(do while) Suma ciągu wynosi: "+ciagdw);
 //
 //        }
-
-        System.out.println("program obliczajacy nalezny podatek dochodowy");
-
-        System.out.println("Podaj swój dochód: ");
-        Scanner input= new Scanner(System.in);
-        double dochod= input.nextDouble();
-
-        double podatek=0;
-
-
-
-            if (dochod < 85_528) {
-                podatek = (0.18 * dochod) - 556.02;
-                System.out.println("Należny podatek wynosi " + podatek + "zł");
-            } else if (dochod >= 85_528) {
-                double nadwyzka = dochod - 85_528;
-                podatek = 14_839.02 + 0.32 * nadwyzka;
-                System.out.println("Należny podatek wynosi " + (podatek) + "zł");
-            } else {
-                System.out.println("Proszę podać poprawne dane ");
-            }
-
-
-
-
-
-
+//
+//        System.out.println("program obliczajacy nalezny podatek dochodowy");
+//
+//        System.out.println("Podaj swój dochód: ");
+//        Scanner input= new Scanner(System.in);
+//        double dochod= input.nextDouble();
+//
+//        double podatek=0;
+//
+//
+//
+//            if (dochod < 85_528) {
+//                podatek = (0.18 * dochod) - 556.02;
+//                System.out.println("Należny podatek wynosi " + podatek + "zł");
+//            } else if (dochod >= 85_528) {
+//                double nadwyzka = dochod - 85_528;
+//                podatek = 14_839.02 + 0.32 * nadwyzka;
+//                System.out.println("Należny podatek wynosi " + (podatek) + "zł");
+//            } else {
+//                System.out.println("Proszę podać poprawne dane ");
+//            }
+//
     }
 }
+
+
 //multiplier do mnożników ofc
+// shift strzalka zaznaczenie
+// ctrl d duplikacja
